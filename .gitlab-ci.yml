@@ -1,0 +1,41 @@
+image: node:latest
+
+services:
+  - docker
+
+stages:
+  - build
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+  tags:
+    - docker
+  artifacts:
+    paths:
+      - node_modules/
+
+unit-testing:
+  stage: test
+  script:
+    - chmod +rwx ./node_modules/.bin/jest
+    - echo "Running tests on code correctness"
+    - npm test
+  tags:
+    - docker
+
+code-style:
+  stage: test
+  script:
+    - chmod +rwx ./node_modules/.bin/eslint
+    - echo "Checking files for good code style"
+    - npx eslint Server/webapps/cesium/*.js
+    - npx eslint Server/webapps/cesium/modules/*/*.js
+  tags:
+    - docker

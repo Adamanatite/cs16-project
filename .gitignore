@@ -1,0 +1,17 @@
+# Python Files
+*.pyc
+
+# Compiled Documents
+*.pdf
+*.ps
+
+startup.bat
+shutdown.bat
+
+# Server files
+Server/logs/
+Server/temp/
+Server/webapps/geoserver/data/logs/
+Server/work/
+Server/bin/v9.6.0/
+.vscode/
