@@ -1,5 +1,9 @@
 # Team CS16
 ### Main repository for Team Project 3
+
+## IMPORTANT - Reupload Information
+This source code has been uploaded to my personal GitHub from a private source repo. In order to upload it, I had to delete most of the server files, keeping only the source code. This means that without external sources you will not be able to run this app from this repo. To see how the app functioned, with all of its features, you can watch [this walk-through video](https://youtu.be/luTXvFhJIDE).
+
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
